@@ -30,7 +30,7 @@ Selain itu, aplikasi ini mengintegrasikan kembali **halaman Profile** dari tugas
 
 | **Dark Mode** | **Light Mode** |
 | :---: | :---: |
-| <img src="pam61.jpeg" width="350" alt="Dark Mode 1" /> | <img src="pam62.jpeg" width="350" alt="Light Mode 1" /> |
+| <img src="pam61.jpeg" width="350" alt="Dark Mode 1" /> | <img src="<img width="720" height="1600" alt="pam62" src="https://github.com/user-attachments/assets/e1ccfde0-d549-427a-9aae-0e1efe800cad" /> |
 | <img src="https://github.com/user-attachments/assets/a456c371-114c-40f5-bc76-f313f6031316" width="350" alt="Dark Mode 2" /> | <img src="https://github.com/user-attachments/assets/4b29932d-ec9d-42cd-8e50-3e87ca5dc8be" width="350" alt="Light Mode 2" /> |
 
 ---
