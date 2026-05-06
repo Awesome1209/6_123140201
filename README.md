@@ -191,9 +191,3 @@ NEWS_API_KEY=ISI_API_KEY_NEWSAPI_KAMU
 | Dark Mode | Buka Profile, aktifkan Dark Mode |
 
 ---
-
-## 📝 Catatan Evolusi dari Tugas 5
-
-- Route utama `notes` tetap dipertahankan agar struktur navigasi lama tidak rusak, tetapi label UI diubah menjadi **News**.
-- File Notes lama seperti `NotesViewModel`, `NoteDetailScreen`, `AddNoteScreen`, dan `EditNoteScreen` tidak dihapus karena akan berguna untuk **Tugas 7 - Local Data Storage**.
-- Tugas 6 fokus pada integrasi API, repository pattern, UI state, dan navigasi detail artikel.
