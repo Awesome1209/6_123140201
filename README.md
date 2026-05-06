@@ -1,9 +1,13 @@
 # 📰 Tugas 6 - News Reader App dengan NewsAPI
 
 <p align="center">
-  <img src="[https://img.shields.io/badge/Platform-Compose%20Multiplatform-blue?style=for-the-badge&logo=kotlin](https://img.shields.io/badge/Platform-Compose%20Multiplatform-blue?style=for-the-badge&logo=kotlin)" alt="Platform">
-  <img src="[https://img.shields.io/badge/Architecture-MVVM%20%2B%20Repository-green?style=for-the-badge](https://img.shields.io/badge/Architecture-MVVM%20%2B%20Repository-green?style=for-the-badge)" alt="Architecture">
-  <img src="[https://img.shields.io/badge/API-NewsAPI-orange?style=for-the-badge](https://img.shields.io/badge/API-NewsAPI-orange?style=for-the-badge)" alt="API">
+
+  <img src="https://img.shields.io/badge/Platform-Compose%20Multiplatform-blue?style=for-the-badge&logo=kotlin" alt="Platform">
+
+  <img src="https://img.shields.io/badge/Architecture-MVVM-green?style=for-the-badge" alt="Architecture">
+
+  <img src="https://img.shields.io/badge/Course-Mobile%20Development-orange?style=for-the-badge" alt="Course">
+
 </p>
 
 ## 👤 Informasi Mahasiswa
