@@ -46,9 +46,9 @@ Aplikasi ini menggunakan **Ktor Client** untuk melakukan *request* ke *public en
 
 | News Page | Article Detail Page |
 | :---: | :---: |
-| <img src="Pam6-1.jpeg" width="280" /> | <img src="pam6-2.jpeg" width="280" /> |
+| <img width="720" height="1600" alt="Pam6-1" src="https://github.com/user-attachments/assets/77df6a6d-3fe5-4236-8560-bec5200ba38a" /> | <img width="720" height="1600" alt="pam6-3" src="https://github.com/user-attachments/assets/a7859320-ab01-406a-8914-92af874f565a" /> |
 | **Favorite Page** | **Profil Page** |
-| <img src="pam6-3.jpeg" width="280" /> | <img src="pam6-4.jpeg" width="280" /> |
+| <img width="720" height="1600" alt="pam6-2" src="https://github.com/user-attachments/assets/8569ab14-e820-4a1c-b190-57399a283294" /> | <img width="720" height="1600" alt="pam6-4" src="https://github.com/user-attachments/assets/c0035dad-15c1-49ef-b738-2eacbe475979" /> |
 
 ---
 
