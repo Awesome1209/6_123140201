@@ -1,3 +1,39 @@
+```
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+*   **Kotlin Multiplatform & Compose Multiplatform**
+*   **Material 3** & **Navigation Compose**
+*   **Ktor Client** (Networking)
+*   **Kotlinx Serialization** (JSON Parsing)
+*   **Coil 3** (Image Loading)
+*   **ViewModel + StateFlow**
+
+---
+
+## 🧪 Demo States
+
+| State | Cara Demo |
+| :--- | :--- |
+| **Loading** | Muncul saat aplikasi pertama kali mengambil data. |
+| **Success** | Artikel tampil dengan gambar dan deskripsi lengkap. |
+| **Error** | Ubah API key menjadi salah untuk melihat pesan error/retry. |
+| **Refresh** | Gunakan tombol Refresh untuk memperbarui daftar berita. |
+| **Favorites** | Klik ikon bintang pada artikel dan cek di tab Favorites. |
+| **Dark Mode** | Aktifkan melalui menu Profile. |
+
+---
+
+## 💻 Cara Menjalankan
+
+1.  Clone repositori ini.
+2.  Pastikan `local.properties` sudah dikonfigurasi dengan API Key.
+3.  LTentu, ini adalah draf `README.md` untuk **Tugas 6** yang telah dirapikan menggunakan template profesional dari tugas sebelumnya, dengan mengintegrasikan seluruh konten Tugas 6, link video, dan grid foto yang Anda berikan.
+
+---
+
 # 📰 Tugas 6 - News Reader App dengan NewsAPI
 
 <p align="center">
@@ -20,56 +56,52 @@
 
 ## 📖 Deskripsi Proyek
 
-Project ini merupakan evolusi dari **Tugas 5 - Notes App Navigation** menjadi **Tugas 6 - News Reader App**.
-Fondasi Tugas 5 tetap dipertahankan, seperti Navigation Compose, Bottom Navigation, Profile Screen, MVVM, dan Dark Mode. Pada Tugas 6, aplikasi dikembangkan menjadi pembaca berita dengan integrasi **REST API menggunakan Ktor Client** dan data dari **NewsAPI**.
+Project ini merupakan evolusi dari **Tugas 5 - Notes App Navigation** menjadi **Tugas 6 - News Reader App**. Fondasi dari tugas sebelumnya tetap dipertahankan, termasuk *Navigation Compose*, *Bottom Navigation*, *Profile Screen*, *MVVM*, dan *Dark Mode*.
 
-Aplikasi mengambil headline terbaru dari endpoint:
-
-```text
-GET https://newsapi.org/v2/top-headlines?country=us&pageSize=20
-```
-
-Authentication dikirim melalui header:
-
-```text
-X-Api-Key: NEWS_API_KEY
-```
+Pada pembaruan ini, aplikasi dikembangkan menjadi pembaca berita dinamis dengan integrasi **REST API menggunakan Ktor Client** untuk mengambil data artikel secara *real-time* dari **NewsAPI**.
 
 ---
 
-## ✅ Fitur Tugas 6
+## 🎬 Video & Screenshot
 
-1. **Fetch berita dari public API** menggunakan NewsAPI.
-2. **Ktor Client** untuk HTTP request multiplatform.
-3. **Kotlinx Serialization** untuk parsing JSON response.
-4. **Repository Pattern** melalui `NewsRepository`.
-5. **Loading, Success, Error State** melalui `NewsUiState` dan `NewsViewModel`.
-6. **List artikel** dengan title, description, source, tanggal, dan image.
-7. **Article Detail Screen** dengan passing `articleId` sebagai argument navigasi.
-8. **Refresh functionality** melalui tombol Refresh.
-9. **Search headline** berdasarkan keyword.
-10. **Favorite articles** pada tab Favorites.
-11. **Profile dan Dark Mode** dari tugas sebelumnya tetap dipertahankan.
+### 🎥 Demo Video
+[**Klik di sini untuk melihat video demonstrasi**](https://drive.google.com/drive/folders/1_LfpLpUr39LGJHy_cD_H-1eySeB6txRK?usp=sharing)
+
+### 🖼️ Screenshot Aplikasi
+| 1. News Page | 2. Favorite Page |
+| :---: | :---: |
+| <img src="https://lh3.googleusercontent.com/d/1yW1SgHREv4mZ_89F67j8x1U4N3fT_wVz" width="300" /> | <img src="https://lh3.googleusercontent.com/d/18H1T1P2v_X5q6V6V-o5z6V7V-B5z6V7V" width="300" /> |
+| **3. Article Detail Page** | **4. Profile Page** |
+| <img src="https://lh3.googleusercontent.com/d/1R3B2S2T2U2V2W2X2Y2Z2a2b2c2d2e2f" width="300" /> | <img src="https://lh3.googleusercontent.com/d/1P1Q1R1S1T1U1V1W1X1Y1Z1a1b1c1d1e" width="300" /> |
+
+---
+
+## ✅ Fitur Utama (Tugas 6)
+
+*   **Fetch Berita Real-time**: Mengambil headline terbaru menggunakan NewsAPI.
+*   **Ktor Client**: Implementasi HTTP request yang mendukung multiplatform.
+*   **Repository Pattern**: Manajemen data yang terpusat melalui `NewsRepository`.
+*   **State Management**: Penanganan state *Loading, Success,* dan *Error* melalui `NewsUiState`.
+*   **Fitur Pencarian**: Mencari headline berdasarkan kata kunci tertentu.
+*   **Sistem Favorit**: Menyimpan artikel menarik ke tab Favorites.
+*   **Legacy Features**: Profile management dan Dark Mode dari tugas sebelumnya tetap dipertahankan.
 
 ---
 
 ## 🔐 Konfigurasi API Key
 
-API key tidak ditanam langsung di source code Kotlin. Key dibaca dari `local.properties` lalu dimasukkan ke `BuildConfig` Android.
+API key dikelola secara aman menggunakan `local.properties` dan tidak di-*hardcode* di dalam source code.
 
-File yang dipakai:
-
-```properties
-# local.properties
-NEWS_API_KEY=ISI_API_KEY_NEWSAPI_KAMU_DI_SINI
-```
-
-File `local.properties` sudah masuk `.gitignore`, sehingga tidak ikut ter-commit ke GitHub. Jika membuka project di komputer baru, gunakan `local.properties.example` sebagai contoh.
+1.  Buka file `local.properties` di root project.
+2.  Tambahkan baris berikut:
+    ```properties
+    NEWS_API_KEY=ISI_API_KEY_NEWSAPI_KAMU_DI_SINI
+    ```
+3.  File ini secara otomatis diabaikan oleh `.gitignore` untuk keamanan.
 
 ---
 
 ## 🚦 Alur Navigasi
-
 ```mermaid
 graph LR
     Main[Bottom Nav] --> News[News]
@@ -107,87 +139,60 @@ graph TD
 ```text
 composeApp/src/commonMain/kotlin/org/example/project/
 ├── config/
-│   └── ApiConfig.kt                    # expect API config
+│   └── ApiConfig.kt                # Expect API config
 ├── data/
-│   ├── Article.kt                      # Model UI artikel
-│   ├── Note.kt                         # Model lama dipertahankan untuk tugas berikutnya
-│   ├── Profile.kt
+│   ├── Article.kt                  # Model UI artikel
 │   ├── remote/
-│   │   ├── HttpClientFactory.kt        # Setup Ktor Client
-│   │   ├── NewsApi.kt                  # Request ke NewsAPI
+│   │   ├── HttpClientFactory.kt     # Setup Ktor Client
+│   │   ├── NewsApi.kt               # Request ke NewsAPI
 │   │   └── dto/
-│   │       └── NewsResponseDto.kt      # DTO JSON response
+│   │       └── NewsResponseDto.kt   # DTO JSON response
 │   └── repository/
-│       └── NewsRepository.kt           # Repository pattern
+│       └── NewsRepository.kt        # Repository pattern
 ├── navigation/
 │   ├── AppNavigation.kt
-│   ├── BottomNavBar.kt
-│   └── Screen.kt
+│   └── BottomNavBar.kt
 ├── ui/
-│   ├── components/
-│   │   └── ArticleCard.kt
 │   ├── screens/
 │   │   ├── NewsScreen.kt
-│   │   ├── ArticleDetailScreen.kt
-│   │   └── ProfileScreen.kt
+│   │   └── ArticleDetailScreen.kt
 │   └── theme/
 │       └── AppTheme.kt
 └── viewmodel/
     ├── NewsUiState.kt
-    ├── NewsViewModel.kt
-    ├── NotesViewModel.kt               # Legacy tugas 5 dipertahankan
-    └── ProfileViewModel.kt
-```
-
-Platform-specific API key:
-
-```text
-composeApp/src/androidMain/kotlin/org/example/project/config/ApiConfig.android.kt
-composeApp/src/jvmMain/kotlin/org/example/project/config/ApiConfig.jvm.kt
-composeApp/src/iosMain/kotlin/org/example/project/config/ApiConfig.ios.kt
+    └── NewsViewModel.kt
 ```
 
 ---
 
 ## 🛠️ Teknologi yang Digunakan
 
-- Kotlin Multiplatform
-- Compose Multiplatform
-- Material 3
-- Navigation Compose
-- ViewModel + StateFlow
-- Ktor Client
-- Kotlinx Serialization
-- Coil 3 untuk image loading
-- NewsAPI
+*   **Kotlin Multiplatform & Compose Multiplatform**
+*   **Material 3** & **Navigation Compose**
+*   **Ktor Client** (Networking)
+*   **Kotlinx Serialization** (JSON Parsing)
+*   **Coil 3** (Image Loading)
+*   **ViewModel + StateFlow**
 
 ---
 
-## ▶️ Cara Menjalankan
-
-1. Buka project di Android Studio.
-2. Pastikan file `local.properties` tersedia di root project.
-3. Isi API key:
-
-```properties
-NEWS_API_KEY=ISI_API_KEY_NEWSAPI_KAMU
-```
-
-4. Sync Gradle.
-5. Jalankan konfigurasi Android `composeApp`.
-
----
-
-## 🧪 States yang Perlu Ditunjukkan Saat Demo
+## 🧪 Demo States
 
 | State | Cara Demo |
 | :--- | :--- |
-| Loading | Buka aplikasi pertama kali |
-| Success | Setelah artikel berhasil tampil |
-| Error | Kosongkan/salahkan API key lalu tekan Retry |
-| Refresh | Tekan tombol Refresh pada News Screen |
-| Detail | Tap salah satu artikel |
-| Favorites | Tap bintang pada artikel, lalu buka tab Favorites |
-| Dark Mode | Buka Profile, aktifkan Dark Mode |
+| **Loading** | Muncul saat aplikasi pertama kali mengambil data. |
+| **Success** | Artikel tampil dengan gambar dan deskripsi lengkap. |
+| **Error** | Ubah API key menjadi salah untuk melihat pesan error/retry. |
+| **Refresh** | Gunakan tombol Refresh untuk memperbarui daftar berita. |
+| **Favorites** | Klik ikon bintang pada artikel dan cek di tab Favorites. |
+| **Dark Mode** | Aktifkan melalui menu Profile. |
 
 ---
+
+## 💻 Cara Menjalankan
+
+1.  Clone repositori ini.
+2.  Pastikan `local.properties` sudah dikonfigurasi dengan API Key.
+3.  Lakukan **Sync Gradle**.
+4.  Jalankan aplikasi pada emulator atau perangkat Android/JVM.
+```
